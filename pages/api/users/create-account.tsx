@@ -7,7 +7,6 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const { name, email } = req.body;
-
     const user = await client.user.findUnique({
       where: {
         email,

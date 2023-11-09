@@ -23,7 +23,8 @@ const Login: NextPage = () => {
 
   const onValid = async (data: IForm) => {
     document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    mutate("/api/users/me");
+    // mutate("/api/users/me");
+    mutate("/api/users/me", null, false);
 
     if (!loading) {
       const request = await fetch("/api/users/log-in", {
