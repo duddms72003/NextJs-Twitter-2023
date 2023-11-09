@@ -35,7 +35,7 @@ const Upload: NextPage = () => {
     }
   }, [data, router]);
   return (
-    <Layout canGoBack>
+    <Layout canGoBack special="">
       <Logo />
       <form className="p-4 space-y-4" onSubmit={handleSubmit(onValid)}>
         <Input

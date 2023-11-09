@@ -3,13 +3,20 @@ import { useRouter } from "next/router";
 interface LayoutProps {
   canGoBack?: boolean;
   children: React.ReactNode;
+  special: string;
 }
 
-export default function Layout({ canGoBack, children }: LayoutProps) {
+export default function Layout({ canGoBack, children, special }: LayoutProps) {
   const router = useRouter();
   const onClick = () => {
     router.back();
   };
+
+  const baseClass =
+    "w-full h-screen justify-center px-10 text-lg font-medium fixed text-gray-800 border-b top-0 flex items-center";
+  const specialClass = "px-0";
+  const classes = special ? `${baseClass} ${specialClass}` : baseClass;
+
   return (
     <>
       <div>
@@ -34,7 +41,7 @@ export default function Layout({ canGoBack, children }: LayoutProps) {
           ) : null}
         </div>
       </div>
-      <div className=" w-full h-screen justify-center text-lg px-10 font-medium  fixed text-gray-800 border-b top-0  flex items-center">
+      <div className={classes}>
         <div className="w-full">{children}</div>
       </div>
     </>

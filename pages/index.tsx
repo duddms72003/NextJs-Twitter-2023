@@ -39,25 +39,64 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Layout>
-        <Logo />
-        <div className="overflow-y-scroll h-[300px]">
-          {data?.tweets?.map((tweet) => (
-            <Item
-              id={tweet.id}
-              key={tweet.id}
-              title={tweet.name}
-              hearts={tweet._count.favs}
+      <div className=" fixed top-0 w-full bg-white py-5">
+        <svg
+          width="50px"
+          height="50px"
+          viewBox="328 355 335 276"
+          xmlns="http://www.w3.org/2000/svg"
+          className="mx-auto"
+        >
+          <path
+            d="
+      M 630, 425
+      A 195, 195 0 0 1 331, 600
+      A 142, 142 0 0 0 428, 570
+      A  70,  70 0 0 1 370, 523
+      A  70,  70 0 0 0 401, 521
+      A  70,  70 0 0 1 344, 455
+      A  70,  70 0 0 0 372, 460
+      A  70,  70 0 0 1 354, 370
+      A 195, 195 0 0 0 495, 442
+      A  67,  67 0 0 1 611, 380
+      A 117, 117 0 0 0 654, 363
+      A  65,  65 0 0 1 623, 401
+      A 117, 117 0 0 0 662, 390
+      A  65,  65 0 0 1 630, 425
+      Z"
+            fill="#3BA9EE"
+          />
+        </svg>
+      </div>
+      <div className="mt-[90px]">
+        {data?.tweets?.map((tweet) => (
+          <Item
+            id={tweet.id}
+            key={tweet.id}
+            title={tweet.name}
+            description={tweet.description}
+            hearts={tweet._count.favs}
+          />
+        ))}
+      </div>
+      <div>
+        <WriteBtn href="/tweets/upload">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L6.832 19.82a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L16.863 4.487zm0 0L19.5 7.125"
             />
-          ))}
-
-          {/* <Input placeholder="적어주세요" /> */}
-          {/* <SubmitBtn href="">가입하기/로그인하기</SubmitBtn> */}
-        </div>
-        <div className="mt-12">
-          <WriteBtn href="/tweets/upload">글쓰기</WriteBtn>
-        </div>
-      </Layout>
+          </svg>
+        </WriteBtn>
+      </div>
     </>
   );
 };
