@@ -7,13 +7,14 @@ export default async function handler(
 ) {
   if (req.method === "POST") {
     const { name, email } = req.body;
+
     const user = await client.user.findUnique({
       where: {
         email,
       },
     });
     if (user) {
-      return res.status(200).end();
+      return res.status(404).end();
     }
     await client.user.create({
       data: {

@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import useSWR, { useSWRConfig } from "swr";
+import { useSWRConfig } from "swr";
 
 interface IForm {
   email: string;
