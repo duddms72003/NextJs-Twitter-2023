@@ -55,7 +55,7 @@ const CreateAccount: NextPage = () => {
               <label htmlFor="name"></label>
               <div className="relative">
                 <input
-                  className="font-medium text-[15px] text-gray-400 placeholder-gray-300 w-full border-2 border-gray-300 rounded-[15px] py-[6px] pl-[40px] pr-[6px]"
+                  className="font-medium text-[15px] placeholder-gray-300 w-full border-2 border-gray-300 rounded-[15px] py-[6px] pl-[40px] pr-[6px]"
                   id="name"
                   type="text"
                   placeholder="name"
@@ -85,7 +85,7 @@ const CreateAccount: NextPage = () => {
               <label htmlFor="email"></label>
               <div className="relative">
                 <input
-                  className="font-medium text-[15px] text-gray-400 placeholder-gray-300 w-full border-2 border-gray-300 rounded-[15px] py-[6px] pl-[40px] pr-[6px]"
+                  className="font-medium text-[15px] placeholder-gray-300 w-full border-2 border-gray-300 rounded-[15px] py-[6px] pl-[40px] pr-[6px]"
                   id="email"
                   type="email"
                   placeholder="email"

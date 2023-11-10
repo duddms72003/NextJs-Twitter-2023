@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const { user } = useUser();
   const router = useRouter();
   const { data, error } = useSWR<TweetsResponse>("/api/tweets");
-  console.log("유저랑 데이터", user, data);
+  // console.log(user, data);
 
   useEffect(() => {
     if (error) {

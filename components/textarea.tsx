@@ -26,8 +26,8 @@ export default function TextArea({
       <textarea
         id={name}
         {...register}
-        className="resize-none appearance-none w-full px-3 py-2 border border-gray-300 rounded-md shadow-md placeholder-gray-400 focus:outline-none focus:ring-[#3BA9EE] focus:border-[#3BA9EE]"
-        rows={4}
+        className="mb-3 rounded-bl-lg rounded-br-lg border-0 resize-none text-[14px] font-normal  appearance-none w-full px-3 py-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-[#3BA9EE] focus:border-[#3BA9EE]"
+        rows={5}
         {...rest}
       />
     </div>

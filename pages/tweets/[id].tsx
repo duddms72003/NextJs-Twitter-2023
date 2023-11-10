@@ -19,7 +19,7 @@ interface ItemDetailResponse {
 
 const ItemDetail: NextPage = () => {
   const { user, isLoading } = useUser();
-  console.log(user);
+  // console.log(user);
   const router = useRouter();
   // console.log(router.query);
   const { mutate } = useSWRConfig();
@@ -93,6 +93,7 @@ const ItemDetail: NextPage = () => {
             </div>
           </div>
           <div>
+            <p>{data?.tweet?.name}</p>
             <p className="font-light text-[17px] leading-[1.5] my-3">
               {data?.tweet?.description}
             </p>

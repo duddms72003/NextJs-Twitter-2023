@@ -35,25 +35,29 @@ const Upload: NextPage = () => {
     }
   }, [data, router]);
   return (
-    <Layout canGoBack special="">
+    <Layout canGoBack special="specialClass">
       <Logo />
-      <form className="p-4 space-y-4" onSubmit={handleSubmit(onValid)}>
+      <div className="bg-[#ebeef4] rounded-xl p-10">
+        <p className="pb-9 font-normal text-center text-[21px]">
+          What are you thinking of ?
+        </p>
         <Input
           register={register("name", { required: true })}
           required
-          label="Title"
+          label=""
           name="name"
           type="text"
         />
-        <TextArea
-          register={register("description", { required: true })}
-          name="description"
-          label="Description"
-          required
-        />
+        <form className="space-y-4" onSubmit={handleSubmit(onValid)}>
+          <TextArea
+            register={register("description", { required: true })}
+            name="description"
+            required
+          />
 
-        <Button text={loading ? "Loading..." : "Upload"} />
-      </form>
+          <Button text={loading ? "Loading..." : "Upload"} />
+        </form>
+      </div>
     </Layout>
   );
 };

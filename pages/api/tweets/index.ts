@@ -9,6 +9,9 @@ async function handler(
 ) {
   if (req.method === "GET") {
     const tweets = await client.tweet.findMany({
+      orderBy: {
+        createdAt: "desc",
+      },
       include: {
         user: true,
         _count: {

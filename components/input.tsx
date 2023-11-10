@@ -1,23 +1,3 @@
-// interface InputProps {
-//   placeholder: string;
-// }
-
-// export default function Input({ placeholder }: InputProps) {
-//   return (
-//     <>
-//       <div className="w-full bg-white">
-//         <label htmlFor="userInput"></label>
-//         <input
-//           id="userInput"
-//           type="text"
-//           placeholder={placeholder}
-//           className="w-full px-[10px] py-[5px] border border-blue-400  rounded-full"
-//         />
-//       </div>
-//     </>
-//   );
-// }
-
 import type { UseFormRegisterReturn } from "react-hook-form";
 
 interface InputProps {
@@ -39,20 +19,18 @@ export default function Input({
 }: InputProps) {
   return (
     <div>
-      <label
-        className="mb-1 block text-sm font-medium text-gray-700"
-        htmlFor={name}
-      >
+      <label className="hidden" htmlFor={name}>
         {label}
       </label>
       {kind === "text" ? (
-        <div className="rounded-md relative flex  items-center ">
+        <div className="relative flex items-center w-full ">
           <input
             id={name}
             required={required}
             {...register}
             type={type}
-            className="appearance-none w-full px-3 py-2 border border-gray-300 rounded-md shadow-md placeholder-gray-400 focus:outline-none focus:ring-[#3BA9EE] focus:border-[#3BA9EE]"
+            placeholder="Start here"
+            className="text-[15px] text-normal placeholder-gray-300 px-3 py-2 focus:outline-none border-0 shadow-none w-full border-b border-dotted rounded-none rounded-tl-md rounded-tr-md "
           />
         </div>
       ) : null}
