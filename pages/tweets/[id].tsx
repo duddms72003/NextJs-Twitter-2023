@@ -21,7 +21,7 @@ const ItemDetail: NextPage = () => {
   const { user, isLoading } = useUser();
   console.log(user);
   const router = useRouter();
-  console.log(router.query);
+  // console.log(router.query);
   const { mutate } = useSWRConfig();
   const { data, mutate: boundMutate } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/tweets/${router.query.id}` : null
@@ -33,8 +33,8 @@ const ItemDetail: NextPage = () => {
     boundMutate((prev) => prev && { ...prev, isLiked: !prev.isLiked }, false);
     toggleFav({});
   };
+  // console.log(data);
 
-  console.log(data);
   return (
     <Layout canGoBack special="">
       <div className="px-4 pt-4 pb-3 border rounded-lg">

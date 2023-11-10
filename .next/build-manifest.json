@@ -30,10 +30,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/tweets/upload": [
+    "/tweets/[id]": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/tweets/upload.js"
+      "static/chunks/pages/tweets/[id].js"
     ]
   },
   "ampFirstPages": []

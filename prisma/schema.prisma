@@ -16,21 +16,9 @@ model User {
   name      String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  // tokens    Token[]
   tweets    Tweet[]
   fav       Fav[]
 }
-
-// model Token {
-//   id        Int      @id @default(autoincrement())
-//   payload   String   @unique
-//   user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-//   userId    Int
-//   createdAt DateTime @default(now())
-//   updatedAt DateTime @updatedAt
-
-//   @@index([userId])
-// }
 
 model Tweet {
   id          Int      @id @default(autoincrement())

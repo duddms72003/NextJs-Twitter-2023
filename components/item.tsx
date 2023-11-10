@@ -5,9 +5,18 @@ interface ItemProps {
   id: number;
   hearts: number;
   description: string;
+  createdAt: Date;
+  name: string;
 }
 
-export default function Item({ title, hearts, id, description }: ItemProps) {
+export default function Item({
+  title,
+  hearts,
+  id,
+  description,
+  createdAt,
+  name,
+}: ItemProps) {
   return (
     <Link href={`/tweets/${id}`}>
       <div className="border-t-[1px] px-4 pt-6 pb-2 cursor-pointer justify-between">
@@ -15,10 +24,12 @@ export default function Item({ title, hearts, id, description }: ItemProps) {
           <div className="w-10 h-10 p-5 rounded-full bg-gray-300 "></div>
           <div className="w-full">
             <div className="ml-5 flex flex-col">
+              <p>{name}</p>
               <h3 className="text-sm font-medium text-gray-900">{title}</h3>
               <p className="font-light text-[17px] leading-[1.5] my-3">
                 {description}
               </p>
+              <p className="">{new Date(createdAt).toLocaleString()}</p>
             </div>
             <div className="ml-[10px] flex justify-between">
               <button>

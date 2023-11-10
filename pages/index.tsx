@@ -4,13 +4,13 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import useSWR from "swr";
 import useUser from "@libs/client/useUser";
-// import SubmitBtn from "@components/submitBtn";
-import Layout from "@components/layout";
 import WriteBtn from "@components/writeBtn";
 import Item from "@components/item";
-import Logo from "@components/logo";
 
 interface TweetWithCount extends Tweet {
+  user: {
+    name: string;
+  };
   _count: {
     favs: number;
   };
@@ -25,7 +25,7 @@ const Home: NextPage = () => {
   const { user } = useUser();
   const router = useRouter();
   const { data, error } = useSWR<TweetsResponse>("/api/tweets");
-  console.log(user, data);
+  console.log("유저랑 데이터", user, data);
 
   useEffect(() => {
     if (error) {
@@ -74,8 +74,10 @@ const Home: NextPage = () => {
             id={tweet.id}
             key={tweet.id}
             title={tweet.name}
+            name={tweet.user.name}
             description={tweet.description}
             hearts={tweet._count.favs}
+            createdAt={tweet.createdAt}
           />
         ))}
       </div>
