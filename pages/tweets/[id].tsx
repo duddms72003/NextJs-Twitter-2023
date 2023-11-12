@@ -19,7 +19,7 @@ interface ItemDetailResponse {
 
 const ItemDetail: NextPage = () => {
   const { user, isLoading } = useUser();
-  // console.log(user);
+  // console.log(user); 주석처리 및 변수 미사용으로 파일에 오류인식
   const router = useRouter();
   // console.log(router.query);
   const { mutate } = useSWRConfig();
@@ -34,6 +34,10 @@ const ItemDetail: NextPage = () => {
     toggleFav({});
   };
   // console.log(data);
+
+  const handleClickComment = () => {
+    alert("속았징 🐨 ㅎㅎ");
+  };
 
   return (
     <Layout canGoBack special="">
@@ -103,7 +107,7 @@ const ItemDetail: NextPage = () => {
                 : ""}
             </p>
             <div className="flex">
-              <button>
+              <button onClick={handleClickComment}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
