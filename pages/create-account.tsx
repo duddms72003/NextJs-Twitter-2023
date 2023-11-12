@@ -2,6 +2,7 @@ import Button from "@components/button";
 import Layout from "@components/layout";
 import Logo from "@components/logo";
 import { NextPage } from "next";
+import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -81,7 +82,7 @@ const CreateAccount: NextPage = () => {
                 {errors?.name?.message}
               </span>
             </div>
-            <div className="mb-[50px] relative ">
+            <div className="mb-[45px] relative ">
               <label htmlFor="email"></label>
               <div className="relative">
                 <input
@@ -114,6 +115,13 @@ const CreateAccount: NextPage = () => {
             </div>
             <Button text={loading ? "Loading" : "Sign Up"} />
           </form>
+
+          <p className="text-gray-400 font-normal text-[17px] mt-5 text-center">
+            Have an account already?
+            <span className="text-[#3BA9EE]">
+              <Link href={"/log-in"}> Sign in</Link>
+            </span>
+          </p>
         </div>
       </Layout>
     </>
