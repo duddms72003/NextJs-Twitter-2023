@@ -5,33 +5,33 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/FbTsjX4PUDPs35ILcgoh-/_buildManifest.js",
-    "static/FbTsjX4PUDPs35ILcgoh-/_ssgManifest.js",
-    "static/FbTsjX4PUDPs35ILcgoh-/_middlewareManifest.js"
+    "static/jaPj8ilxNlk4VE7fd9Ewz/_buildManifest.js",
+    "static/jaPj8ilxNlk4VE7fd9Ewz/_ssgManifest.js",
+    "static/jaPj8ilxNlk4VE7fd9Ewz/_middlewareManifest.js"
   ],
   "pages": {
     "/": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/664-41844e7ff48658f9.js",
       "static/chunks/pages/index-846a4d4706d8bbd0.js"
     ],
     "/_app": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/css/bc83be51c6a361de.css",
       "static/chunks/pages/_app-e5c099ae1d33484b.js"
     ],
     "/_error": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/pages/_error-0a004b8b8498208d.js"
     ],
     "/create-account": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/998-a07637e506e894a0.js",
@@ -39,26 +39,26 @@
       "static/chunks/pages/create-account-1aa766f5f6458fca.js"
     ],
     "/log-in": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/998-a07637e506e894a0.js",
       "static/chunks/pages/log-in-f89694555df1db6a.js"
     ],
     "/tweets/\bupload": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/pages/tweets/\bupload-634b565e33498ef1.js"
     ],
     "/tweets/[id]": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/pages/tweets/[id]-fc127fd5e1a78bf8.js"
     ],
     "/tweets/upload": [
-      "static/chunks/webpack-69bfa6990bb9e155.js",
+      "static/chunks/webpack-805c4e48eebf5aa8.js",
       "static/chunks/framework-4556c45dd113b893.js",
       "static/chunks/main-d8b1ff545a609496.js",
       "static/chunks/998-a07637e506e894a0.js",

@@ -1,17 +1,17 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
+  "/api/tweets/[id]/fav": "pages/api/tweets/[id]/fav.js",
   "/api/tweets/[id]": "pages/api/tweets/[id].js",
   "/api/tweets": "pages/api/tweets.js",
+  "/api/users/create-account": "pages/api/users/create-account.js",
   "/api/users/log-in": "pages/api/users/log-in.js",
   "/api/users/me": "pages/api/users/me.js",
-  "/create-account": "pages/create-account.js",
   "/": "pages/index.js",
-  "/api/users/create-account": "pages/api/users/create-account.js",
-  "/tweets/\bupload": "pages/tweets/\bupload.js",
   "/log-in": "pages/log-in.js",
-  "/tweets/[id]": "pages/tweets/[id].js",
+  "/tweets/\bupload": "pages/tweets/\bupload.js",
   "/tweets/upload": "pages/tweets/upload.js",
-  "/api/tweets/[id]/fav": "pages/api/tweets/[id]/fav.js",
+  "/tweets/[id]": "pages/tweets/[id].js",
+  "/create-account": "pages/create-account.js",
   "/_document": "pages/_document.js"
 }
