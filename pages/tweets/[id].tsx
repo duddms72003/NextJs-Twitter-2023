@@ -18,11 +18,12 @@ interface ItemDetailResponse {
 }
 
 const ItemDetail: NextPage = () => {
-  const { user, isLoading } = useUser();
-  // console.log(user); 주석처리 및 변수 미사용으로 파일에 오류인식
+  const { user } = useUser();
+  console.log(user);
   const router = useRouter();
   // console.log(router.query);
-  const { mutate } = useSWRConfig();
+  // const { mutate } = useSWRConfig();
+  const {} = useSWRConfig();
   const { data, mutate: boundMutate } = useSWR<ItemDetailResponse>(
     router.query.id ? `/api/tweets/${router.query.id}` : null
   );
@@ -36,7 +37,7 @@ const ItemDetail: NextPage = () => {
   // console.log(data);
 
   const handleClickComment = () => {
-    alert("속았징 🐨 ㅎㅎ");
+    alert("리팩토링예정");
   };
 
   return (
@@ -106,7 +107,7 @@ const ItemDetail: NextPage = () => {
                 ? new Date(data.tweet.createdAt).toLocaleString()
                 : ""}
             </p>
-            <div className="flex">
+            <div className="flex justify-between">
               <button onClick={handleClickComment}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -142,7 +143,7 @@ const ItemDetail: NextPage = () => {
               <button
                 onClick={onFavClick}
                 className={cls(
-                  "p-3 w-[48px] rounded-full flex items-center hover:bg-gray-100 justify-center ",
+                  "p-3 rounded-full flex items-center hover:bg-gray-100 justify-center ",
                   data?.isLiked
                     ? "text-[#3BA9EE]  hover:text-[#3BA9EE]"
                     : "text-gray-400  hover:text-gray-500"
@@ -179,6 +180,7 @@ const ItemDetail: NextPage = () => {
                     />
                   </svg>
                 )}
+                {/* <span className="text-sm font-mono">{data?.tweet?.hearts}</span> */}
               </button>
               <button>
                 <svg

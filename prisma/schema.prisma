@@ -28,6 +28,7 @@ model Tweet {
   userId      Int
   name        String
   description String
+  hearts      Int      @default(0)
   favs        Fav[]
 
   @@index([userId])

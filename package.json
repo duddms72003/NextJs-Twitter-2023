@@ -6,7 +6,9 @@
     "build": "next build",
     "start": "next start",
     "db-sync": "npx prisma migrate dev",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "main": "pages/index.tsx",
   "dependencies": {
@@ -15,6 +17,7 @@
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "autoprefixer": "^10.4.7",
+    "gh-pages": "^6.1.1",
     "iron-session": "^6.3.1",
     "next": "12.1.6",
     "postcss": "8.4.14",
@@ -32,5 +35,6 @@
   "description": "",
   "devDependencies": {
     "prisma": "^5.6.0-dev.62"
-  }
+  },
+  "homepage": "https://duddms72003.github.io/NextJs-Twitter-2023"
 }

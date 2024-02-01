@@ -1,7 +1,15 @@
 {
   "/_app": "pages/_app.js",
-  "/_document": "pages/_document.js",
   "/_error": "pages/_error.js",
+  "/_document": "pages/_document.js",
   "/api/tweets": "pages/api/tweets.js",
-  "/api/users/me": "pages/api/users/me.js"
+  "/create-account": "pages/create-account.js",
+  "/api/users/create-account": "pages/api/users/create-account.js",
+  "/api/users/log-in": "pages/api/users/log-in.js",
+  "/": "pages/index.js",
+  "/log-in": "pages/log-in.js",
+  "/tweets/[id]": "pages/tweets/[id].js",
+  "/api/tweets/[id]": "pages/api/tweets/[id].js",
+  "/api/users/me": "pages/api/users/me.js",
+  "/api/tweets/[id]/fav": "pages/api/tweets/[id]/fav.js"
 }

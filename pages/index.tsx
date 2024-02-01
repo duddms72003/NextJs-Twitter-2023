@@ -3,7 +3,7 @@ import { Tweet } from "@prisma/client";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import useSWR from "swr";
-import useUser from "@libs/client/useUser";
+// import useUser from "@libs/client/useUser";
 import WriteBtn from "@components/writeBtn";
 import Item from "@components/item";
 
@@ -22,7 +22,7 @@ interface TweetsResponse {
 }
 
 const Home: NextPage = () => {
-  const { user } = useUser();
+  // const { user } = useUser();
   const router = useRouter();
   const { data, error } = useSWR<TweetsResponse>("/api/tweets");
   // console.log(user, data);
@@ -36,6 +36,19 @@ const Home: NextPage = () => {
   if (!data) {
     return <div />;
   }
+
+  ///////start//////////////////////////////////////
+  // const handleLogout = async () => {
+  //   try {
+  //     await fetch("/api/users/log-out", {
+  //       method: "POST",
+  //     });
+  //     router.push("/"); // 로그아웃 후 홈페이지로 이동
+  //   } catch (error) {
+  //     console.error("로그아웃 중 에러:", error);
+  //   }
+  // };
+  ////////end//////////////////////////////////////////
 
   return (
     <>
@@ -78,6 +91,8 @@ const Home: NextPage = () => {
             description={tweet.description}
             hearts={tweet._count.favs}
             createdAt={tweet.createdAt}
+            isLiked={false}
+            onFavClick={() => {}}
           />
         ))}
       </div>
@@ -98,6 +113,14 @@ const Home: NextPage = () => {
             />
           </svg>
         </WriteBtn>
+        {/* ////start////////////////////////// */}
+        {/* <button
+          className="w-full p-10 bg-black text-white"
+          onClick={handleLogout}
+        >
+          Logout
+        </button> */}
+        {/* ////end////////////////////////// */}
       </div>
     </>
   );
